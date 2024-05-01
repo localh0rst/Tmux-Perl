@@ -1,0 +1,80 @@
+{
+   "abstract" : "Perl library for interacting with tmux",
+   "author" : [
+      "localh0rst <git@fail.ninja>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Minilla/v3.1.23, CPAN::Meta::Converter version 2.150010",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : 2
+   },
+   "name" : "Tmux",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author",
+         "builder"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build::Tiny" : "0.035"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion::Fast" : "0.04",
+            "Test::PAUSE::Permissions" : "0.07",
+            "Test::Pod" : "1.41",
+            "Test::Spellunker" : "v0.2.7"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "File::Which" : "0",
+            "IO::Handle" : "0",
+            "IO::Pty" : "0",
+            "IPC::Open3" : "0",
+            "Moo" : "0",
+            "Moose" : "0",
+            "POSIX" : "0",
+            "Symbol" : "0",
+            "perl" : "v5.36.0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.98"
+         }
+      }
+   },
+   "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/localh0rst/Tmux-Perl/issues"
+      },
+      "homepage" : "https://github.com/localh0rst/Tmux-Perl",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/localh0rst/Tmux-Perl.git",
+         "web" : "https://github.com/localh0rst/Tmux-Perl"
+      }
+   },
+   "version" : "0.5",
+   "x_contributors" : [
+      "localh0rst <git@fail.ninja>"
+   ],
+   "x_serialization_backend" : "JSON::PP version 4.07",
+   "x_static_install" : 1
+}
