@@ -72,9 +72,6 @@
       }
    },
    "version" : "0.5",
-   "x_contributors" : [
-      "localh0rst <git@fail.ninja>"
-   ],
    "x_serialization_backend" : "JSON::PP version 4.07",
    "x_static_install" : 1
 }
