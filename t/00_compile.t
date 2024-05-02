@@ -8,6 +8,7 @@ use_ok $_ for qw(
   Tmux::Panes Tmux::Panes::Pane
   Tmux::Helper::Default Tmux::Filter Tmux::Command
   Tmux::Command::Pane Tmux::Command::Window Tmux::Command::Session
+  Tmux::Filter
 );
 
 done_testing;
