@@ -15,6 +15,12 @@ sub cmd_get_attribute_single( $self, $attribute, $session ) {
   return $attr->[0]->{$attribute};
 }
 
+sub cmd_find_session_by_name( $self, $name ) {
+  my $sessions =
+    $self->cmd_list_sessions( [qw/session_id/], Tmux::Filter->new->equal( 'session_name', $name ) );
+  return ( $sessions->[0] ? $sessions->[0]->{session_id} : undef );
+}
+
 sub cmd_list_sessions( $self, $attributes = [], $filter = undef ) {
 
   my $cmd  = 'list-sessions';
