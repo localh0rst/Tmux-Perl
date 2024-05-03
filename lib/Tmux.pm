@@ -8,7 +8,7 @@ use Tmux::Sessions;
 use Tmux::Windows;
 use Tmux::Panes;
 
-our $VERSION = "0.5";
+our $VERSION = "0.6";
 
 sub sessions($self) {
   return ( Tmux::Sessions->new );
