@@ -12,6 +12,30 @@ extends 'Tmux::Command::Session';
 has '__session_id' => ( is => 'rw' );
 has attributes()   => ( is => 'ro' );
 
+around BUILDARGS => sub( $orig, $class, @args ) {
+
+  return { name => $args[0] }
+    if @args == 1 && !ref $args[0];
+
+  return $class->$orig(@args);
+};
+
+sub BUILD( $self, $args ) {
+
+  # Assume that this session is already created since
+  # $self->__session_id is set and should not be used
+  # outside of Tmux::Sessions. If it is not set, try
+  # to create a new session.
+  return if ( $self->__session_id );
+
+  if ( $self->cmd_find_session_by_name( $args->{name} ) ) {
+    $self->__session_id( $self->cmd_find_session_by_name( $args->{name} ) );
+  } else {
+    $self->__session_id( $self->cmd_new_session( $args->{name}, $args->{params} ) );
+  }
+
+}
+
 foreach my $attr ( @{ attributes() } ) {
   around $attr => sub( $orig, $self ) {
     $self->cmd_get_attribute_single( $attr, $self->__session_id );
