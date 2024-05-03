@@ -7,4 +7,7 @@ my $session = Tmux::Sessions::Session->new("");
 
 is( ref $session, 'Tmux::Sessions::Session', '$session is a valid Tmux::Sessions::Session object' );
 
+my $res = $session->kill;
+is( $res, 1, 'Session is killed' );
+
 done_testing;
