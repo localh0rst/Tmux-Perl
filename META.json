@@ -71,7 +71,7 @@
          "web" : "https://github.com/localh0rst/Tmux-Perl"
       }
    },
-   "version" : "0.5",
+   "version" : "0.6",
    "x_serialization_backend" : "JSON::PP version 4.07",
    "x_static_install" : 1
 }
