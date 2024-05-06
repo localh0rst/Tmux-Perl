@@ -16,7 +16,7 @@ sub regex( $self, $attribute, $value = [], $flags = [], $exact = 0 ) {
     '',
     $prefix, ref($value) eq 'ARRAY' ? join( '|', @{$value} ) : $value,
     ',',
-    $self->mask_attr($attribute),
+    mask_attr($attribute),
     $suffix
 
   );
